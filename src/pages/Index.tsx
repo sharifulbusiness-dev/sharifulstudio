@@ -4,7 +4,9 @@ import IntroScreen from "@/components/IntroScreen";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import MarqueeSection from "@/components/MarqueeSection";
+import WorkSection from "@/components/WorkSection";
 import ServicesSection from "@/components/ServicesSection";
+import ProcessSection from "@/components/ProcessSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -36,7 +38,9 @@ const Index = () => {
           <Navbar />
           <HeroSection />
           <MarqueeSection />
+          <WorkSection />
           <ServicesSection />
+          <ProcessSection />
           <PhilosophySection />
           <AboutSection />
           <TestimonialsSection />
