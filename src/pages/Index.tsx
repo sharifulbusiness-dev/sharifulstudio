@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import IntroScreen from "@/components/IntroScreen";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import MarqueeSection from "@/components/MarqueeSection";
 import ServicesSection from "@/components/ServicesSection";
+import PhilosophySection from "@/components/PhilosophySection";
 import AboutSection from "@/components/AboutSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
 
@@ -31,8 +35,12 @@ const Index = () => {
         >
           <Navbar />
           <HeroSection />
+          <MarqueeSection />
           <ServicesSection />
+          <PhilosophySection />
           <AboutSection />
+          <TestimonialsSection />
+          <FAQSection />
           <ContactSection />
           <FooterSection />
         </motion.div>
