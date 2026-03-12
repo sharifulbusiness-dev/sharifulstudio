@@ -50,7 +50,7 @@ const AboutSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Founded with a singular vision — to elevate the digital landscape 
+              Founded with a singular vision to elevate the digital landscape 
               through uncompromising design. Shariful's Studio & Co. is where 
               creative ambition meets meticulous execution.
             </motion.p>
@@ -62,7 +62,7 @@ const AboutSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              From London to Tokyo, New York to Dubai — we serve clients who 
+              From London to Tokyo, New York to Dubai, we serve clients who 
               understand that exceptional design isn't a luxury. It's a necessity 
               for brands that refuse to blend in.
             </motion.p>
