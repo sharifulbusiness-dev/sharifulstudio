@@ -67,7 +67,16 @@ const Navbar = () => {
                 <motion.a
                   key={link}
                   href={`#${link.toLowerCase()}`}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMenuOpen(false);
+                    setTimeout(() => {
+                      const el = document.getElementById(link.toLowerCase());
+                      if (el) {
+                        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }, 500);
+                  }}
                   className="font-display text-3xl font-light text-foreground hover:italic transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

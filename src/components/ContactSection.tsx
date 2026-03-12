@@ -34,16 +34,20 @@ const ContactSection = () => {
           Ready to elevate your digital presence? We'd love to hear about your project.
         </motion.p>
 
-        <motion.a
-          href="mailto:sharifulstudio.corporate@gmail.com"
-          className="inline-block font-body text-xs tracking-[0.3em] uppercase text-foreground border-b border-foreground pb-2 hover:text-muted-foreground hover:border-muted-foreground transition-colors duration-500"
+        <motion.div
+          className="flex justify-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          sharifulstudio.corporate@gmail.com
-        </motion.a>
+          <a
+            href="mailto:sharifulstudio.corporate@gmail.com"
+            className="font-body text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase text-foreground border-b border-foreground pb-2 hover:text-muted-foreground hover:border-muted-foreground transition-colors duration-500 text-center break-all sm:break-normal"
+          >
+            sharifulstudio.corporate@gmail.com
+          </a>
+        </motion.div>
       </div>
     </section>
   );
