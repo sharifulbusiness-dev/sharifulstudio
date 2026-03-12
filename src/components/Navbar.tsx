@@ -14,8 +14,8 @@ const Navbar = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
       >
-        <span className="font-cursive italic text-lg sm:text-xl text-foreground">
-          Shariful's
+        <span className="font-cursive italic text-sm sm:text-base text-foreground">
+          Shariful's Studio & Co.
         </span>
 
         <div className="hidden md:flex items-center gap-8">

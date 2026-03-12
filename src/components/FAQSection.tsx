@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     question: "How long does a typical project take?",
-    answer: "Timelines vary based on scope and complexity. A focused brand website typically takes 4–6 weeks, while a comprehensive digital platform may require 8–12 weeks. We believe in taking the time needed to deliver exceptional quality — never rushing the craft.",
+    answer: "Timelines vary based on scope and complexity. A focused brand website typically takes 4 to 6 weeks, while a comprehensive digital platform may require 8 to 12 weeks. We believe in taking the time needed to deliver exceptional quality, never rushing the craft.",
   },
   {
     question: "Do you work with international clients?",

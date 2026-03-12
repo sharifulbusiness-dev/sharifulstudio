@@ -35,14 +35,14 @@ const ContactSection = () => {
         </motion.p>
 
         <motion.a
-          href="mailto:hello@sharifulsstudio.com"
+          href="mailto:sharifulstudio.corporate@gmail.com"
           className="inline-block font-body text-xs tracking-[0.3em] uppercase text-foreground border-b border-foreground pb-2 hover:text-muted-foreground hover:border-muted-foreground transition-colors duration-500"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          hello@sharifulsstudio.com
+          sharifulstudio.corporate@gmail.com
         </motion.a>
       </div>
     </section>
