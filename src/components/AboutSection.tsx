@@ -50,7 +50,7 @@ const AboutSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Founded with a singular vision — to elevate the digital landscape 
+              Founded with a singular vision to elevate the digital landscape 
               through uncompromising design. Shariful's Studio & Co. is where 
               creative ambition meets meticulous execution.
             </motion.p>
