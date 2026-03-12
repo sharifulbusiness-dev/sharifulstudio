@@ -23,6 +23,13 @@ const Navbar = () => {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById(link.toLowerCase());
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
               className="font-body text-[11px] tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               {link}
