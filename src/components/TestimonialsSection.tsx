@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
   {
-    quote: "Shariful's Studio transformed our entire digital presence. The attention to detail is unparalleled — every interaction feels intentional.",
+    quote: "Shariful's Studio transformed our entire digital presence. The attention to detail is unparalleled, every interaction feels intentional.",
     name: "Alexandra Chen",
     title: "CEO, Lumière Brands",
     location: "Shanghai",
@@ -21,7 +21,7 @@ const testimonials = [
     location: "Mumbai",
   },
   {
-    quote: "They don't just design websites — they craft experiences. Our clients constantly compliment the elegance of our digital platform.",
+    quote: "They don't just design websites, they craft experiences. Our clients constantly compliment the elegance of our digital platform.",
     name: "James Whitfield",
     title: "Managing Partner, Sterling & Co.",
     location: "London",

@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "What makes Shariful's Studio different?",
-    answer: "We merge the precision of Swiss design with contemporary digital innovation. Every project receives our full creative attention — no templates, no shortcuts. We design experiences that are not only visually striking but strategically sound, ensuring your investment delivers lasting impact.",
+    answer: "We merge the precision of Swiss design with contemporary digital innovation. Every project receives our full creative attention, with no templates and no shortcuts. We design experiences that are not only visually striking but strategically sound, ensuring your investment delivers lasting impact.",
   },
   {
     question: "What are your pricing structures?",
