@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import MarqueeSection from "@/components/MarqueeSection";
 import WorkSection from "@/components/WorkSection";
+import FeaturedInSection from "@/components/FeaturedInSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import PhilosophySection from "@/components/PhilosophySection";
