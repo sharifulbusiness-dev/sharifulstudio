@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
   {
-    quote: "Shariful's Studio transformed our entire digital presence. The attention to detail is unparalleled — every interaction feels intentional.",
+    quote: "Shariful's Studio transformed our entire digital presence. The attention to detail is unparalleled, every interaction feels intentional.",
     name: "Alexandra Chen",
     title: "CEO, Lumière Brands",
     location: "Shanghai",
