@@ -21,7 +21,7 @@ const testimonials = [
     location: "Mumbai",
   },
   {
-    quote: "They don't just design websites — they craft experiences. Our clients constantly compliment the elegance of our digital platform.",
+    quote: "They don't just design websites, they craft experiences. Our clients constantly compliment the elegance of our digital platform.",
     name: "James Whitfield",
     title: "Managing Partner, Sterling & Co.",
     location: "London",

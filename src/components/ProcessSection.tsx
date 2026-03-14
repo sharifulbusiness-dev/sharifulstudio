@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const steps = [
   { number: "01", title: "Discovery", desc: "We immerse ourselves in your brand, audience, and goals to define the perfect creative direction." },
   { number: "02", title: "Strategy", desc: "Architecture, user flows, and content strategy aligned to deliver measurable results." },
-  { number: "03", title: "Design", desc: "Pixel-perfect designs that balance beauty with functionality — every detail considered." },
+  { number: "03", title: "Design", desc: "Pixel perfect designs that balance beauty with functionality where every detail is considered." },
   { number: "04", title: "Launch", desc: "Clean code, rigorous testing, and a seamless handoff. Then we refine based on real-world data." },
 ];
 

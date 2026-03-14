@@ -24,15 +24,16 @@ const ContactSection = () => {
           Let's create together
         </motion.h2>
 
-        <motion.p
+        <motion.div
           className="font-body text-sm text-muted-foreground mb-12 max-w-md mx-auto leading-relaxed"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Ready to elevate your digital presence? We'd love to hear about your project.
-        </motion.p>
+          <p>Ready to elevate your digital presence?</p>
+          <p className="mt-4">We'd love to hear about your project.</p>
+        </motion.div>
 
         <motion.div
           className="flex justify-center"
