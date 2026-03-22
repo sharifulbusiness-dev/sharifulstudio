@@ -43,7 +43,7 @@ const PhilosophySection = () => {
         >
            Every brand has a story worth telling beautifully. We take the time to 
            understand yours, then translate it into a digital experience that 
-           resonates with precision, elegance, and purpose. No noise. Just impact.
+           resonates with precision, elegance, and purpose.
         </motion.p>
       </div>
     </section>
