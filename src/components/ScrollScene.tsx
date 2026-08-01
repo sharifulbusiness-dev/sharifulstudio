@@ -1,6 +1,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, Float } from "@react-three/drei";
 import { Suspense, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import * as THREE from "three";
 
 /** Shared, render-loop-safe scroll progress (0 → 1 over the whole page). */
@@ -30,7 +31,7 @@ const ChromeForm = () => {
       // drifts down, back, and across the page as you scroll
       group.current.position.y = -s * 2.4;
       group.current.position.x =
-        (narrow ? 0.4 : 2.1) + Math.sin(s * Math.PI * 1.5) * (narrow ? 0.5 : 1.1);
+        (narrow ? 0.4 : 2.8) + Math.sin(s * Math.PI * 1.5) * (narrow ? 0.5 : 1.1);
       group.current.position.z = -s * 4.5;
       group.current.rotation.y = s * Math.PI * 3 + t * 0.08;
       group.current.rotation.x = s * Math.PI * 1.2;
@@ -71,8 +72,11 @@ const ChromeForm = () => {
 };
 
 const ScrollScene = () => {
+  const { scrollYProgress } = useScroll();
+  const opacity = useTransform(scrollYProgress, [0, 0.12, 0.9], [1, 0.35, 0.2]);
+
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none">
+    <motion.div className="fixed inset-0 z-0 pointer-events-none" style={{ opacity }}>
       <Canvas
         dpr={[1, 1.75]}
         camera={{ position: [0, 0, 6.5], fov: 42 }}
@@ -86,7 +90,7 @@ const ScrollScene = () => {
           <Environment preset="studio" />
         </Suspense>
       </Canvas>
-    </div>
+    </motion.div>
   );
 };
 
