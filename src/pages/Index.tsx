@@ -55,6 +55,7 @@ const Index = () => {
           <FAQSection />
           <ContactSection />
           <FooterSection />
+          </div>
         </motion.div>
       )}
     </div>
