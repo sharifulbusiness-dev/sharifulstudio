@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, Float, MeshTransmissionMaterial } from "@react-three/drei";
+import { Environment, Float } from "@react-three/drei";
 import { Suspense, useRef } from "react";
 import * as THREE from "three";
 
@@ -19,7 +19,6 @@ const ChromeForm = () => {
   const group = useRef<THREE.Group>(null);
   const knot = useRef<THREE.Mesh>(null);
   const ring = useRef<THREE.Mesh>(null);
-  const shell = useRef<THREE.Mesh>(null);
   const p = useScrollProgress();
 
   useFrame((state) => {
@@ -29,11 +28,11 @@ const ChromeForm = () => {
     if (group.current) {
       // travels down and across the page as you scroll
       group.current.position.y = -s * 3.2;
-      group.current.position.x = Math.sin(s * Math.PI * 1.5) * 1.6;
+      group.current.position.x = 2.1 + Math.sin(s * Math.PI * 1.5) * 1.1;
       group.current.rotation.y = s * Math.PI * 3 + t * 0.08;
       group.current.rotation.x = s * Math.PI * 1.2;
       const scale = 1 + Math.sin(s * Math.PI) * 0.45;
-      group.current.scale.setScalar(scale);
+      group.current.scale.setScalar(scale * 0.9);
     }
 
     if (knot.current) {
@@ -42,9 +41,6 @@ const ChromeForm = () => {
     if (ring.current) {
       ring.current.rotation.x = Math.PI / 2 + s * Math.PI * 2;
       ring.current.scale.setScalar(1 + s * 0.8);
-    }
-    if (shell.current) {
-      shell.current.rotation.y = -s * Math.PI * 4;
     }
   });
 
@@ -61,19 +57,6 @@ const ChromeForm = () => {
           />
         </mesh>
 
-        <mesh ref={shell} scale={1.75}>
-          <icosahedronGeometry args={[1, 1]} />
-          <MeshTransmissionMaterial
-            samples={4}
-            thickness={0.35}
-            chromaticAberration={0.35}
-            transmission={1}
-            roughness={0.18}
-            ior={1.3}
-            backside={false}
-            color="#ffffff"
-          />
-        </mesh>
 
         <mesh ref={ring}>
           <torusGeometry args={[2.1, 0.006, 8, 160]} />
