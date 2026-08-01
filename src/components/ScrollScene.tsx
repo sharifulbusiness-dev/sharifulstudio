@@ -24,15 +24,18 @@ const ChromeForm = () => {
   useFrame((state) => {
     const t = state.clock.elapsedTime;
     const s = p.current;
+    const narrow = state.viewport.aspect < 1;
 
     if (group.current) {
-      // travels down and across the page as you scroll
-      group.current.position.y = -s * 3.2;
-      group.current.position.x = 2.1 + Math.sin(s * Math.PI * 1.5) * 1.1;
+      // drifts down, back, and across the page as you scroll
+      group.current.position.y = -s * 2.4;
+      group.current.position.x =
+        (narrow ? 0.4 : 2.1) + Math.sin(s * Math.PI * 1.5) * (narrow ? 0.5 : 1.1);
+      group.current.position.z = -s * 4.5;
       group.current.rotation.y = s * Math.PI * 3 + t * 0.08;
       group.current.rotation.x = s * Math.PI * 1.2;
-      const scale = 1 + Math.sin(s * Math.PI) * 0.45;
-      group.current.scale.setScalar(scale * 0.9);
+      const scale = (narrow ? 0.6 : 0.9) * (1 + Math.sin(s * Math.PI) * 0.18);
+      group.current.scale.setScalar(scale);
     }
 
     if (knot.current) {
@@ -40,7 +43,7 @@ const ChromeForm = () => {
     }
     if (ring.current) {
       ring.current.rotation.x = Math.PI / 2 + s * Math.PI * 2;
-      ring.current.scale.setScalar(1 + s * 0.8);
+      ring.current.scale.setScalar(1 + s * 0.35);
     }
   });
 
