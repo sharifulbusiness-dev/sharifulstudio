@@ -34,10 +34,14 @@ const Index = () => {
 
       {showMain && (
         <motion.div
+          className="relative"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
+          <ScrollScene />
+          <ScrollProgress />
+          <div className="relative z-10">
           <Navbar />
           <HeroSection />
           <MarqueeSection />
