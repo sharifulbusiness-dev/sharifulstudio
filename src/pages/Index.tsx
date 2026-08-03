@@ -7,6 +7,8 @@ import ScrollProgress from "@/components/ScrollProgress";
 import HeroSection from "@/components/HeroSection";
 import MarqueeSection from "@/components/MarqueeSection";
 import WorkSection from "@/components/WorkSection";
+import ScrollRevealSection from "@/components/ScrollRevealSection";
+
 import FeaturedInSection from "@/components/FeaturedInSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -34,18 +36,20 @@ const Index = () => {
 
       {showMain && (
         <motion.div
-          className="relative"
+          className="relative isolate bg-background"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         >
           <ScrollScene />
           <ScrollProgress />
-          <div className="relative z-10">
+          {/* no z-index here: keeps the blend group shared with the 3D canvas */}
+          <div className="relative">
           <Navbar />
           <HeroSection />
           <MarqueeSection />
           <WorkSection />
+          <ScrollRevealSection />
           <FeaturedInSection />
           <ServicesSection />
           <ProcessSection />
@@ -58,6 +62,7 @@ const Index = () => {
           </div>
         </motion.div>
       )}
+
     </div>
   );
 };
