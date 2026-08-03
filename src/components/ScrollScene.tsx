@@ -1,7 +1,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, Float } from "@react-three/drei";
-import { Suspense, useMemo, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { Suspense, useEffect, useMemo, useRef } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import * as THREE from "three";
 
 /** Shared, render-loop-safe scroll progress (0 → 1 over the whole page). */
@@ -76,13 +76,30 @@ const ChromeForm = ({ lowPower }: { lowPower: boolean }) => {
 };
 
 const ScrollScene = () => {
-  const { scrollYProgress } = useScroll();
-  // fully clears the page before the contact / footer so nothing ghosts behind text
-  const opacity = useTransform(
-    scrollYProgress,
-    [0, 0.12, 0.62, 0.78],
-    [1, 0.45, 0.18, 0]
-  );
+  const raw = useMotionValue(1);
+  const opacity = useSpring(raw, { stiffness: 60, damping: 24, mass: 0.6 });
+
+  useEffect(() => {
+    const update = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const s = max > 0 ? window.scrollY / max : 0;
+      // fully clears before contact / footer so nothing ghosts behind the text
+      const v =
+        s < 0.12
+          ? 1 - (s / 0.12) * 0.55
+          : s < 0.62
+            ? 0.45 - ((s - 0.12) / 0.5) * 0.27
+            : Math.max(0, 0.18 * (1 - (s - 0.62) / 0.16));
+      raw.set(v);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, [raw]);
 
   const { lowPower, reduced } = useMemo(() => {
     if (typeof window === "undefined") return { lowPower: true, reduced: false };
