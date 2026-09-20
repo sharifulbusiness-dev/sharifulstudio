@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import IntroScreen from "@/components/IntroScreen";
 import Navbar from "@/components/Navbar";
-import ScrollScene from "@/components/ScrollScene";
 import ScrollProgress from "@/components/ScrollProgress";
 import HeroSection from "@/components/HeroSection";
 import MarqueeSection from "@/components/MarqueeSection";
@@ -41,7 +40,6 @@ const Index = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <ScrollScene />
           <ScrollProgress />
           {/* no z-index here: keeps the blend group shared with the 3D canvas */}
           <div className="relative">
