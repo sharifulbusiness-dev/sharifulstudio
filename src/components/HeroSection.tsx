@@ -35,13 +35,11 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          We craft digital
+          Web design for brands
           <br />
           <span className="italic font-cursive font-light text-foreground/80">
-            experiences
+            with taste
           </span>
-          <br />
-          that captivate
         </motion.h1>
 
         <motion.div
@@ -53,8 +51,8 @@ const HeroSection = () => {
         >
           <div className="w-12 h-px bg-chrome shrink-0" />
           <p className="font-body text-xs sm:text-sm max-w-sm leading-relaxed text-muted-foreground">
-            Premium web design for brands that demand excellence.
-            From concept to launch, we bring your vision to life.
+            From concept to launch, every detail is considered
+            and every pixel earns its place.
           </p>
         </motion.div>
       </div>
