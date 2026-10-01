@@ -8,42 +8,65 @@ const Navbar = () => {
 
   return (
     <>
-      <motion.nav
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-12 py-6 bg-background/80 backdrop-blur-xl"
+      <motion.div
+        className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
       >
-        <span className="font-cursive italic text-sm sm:text-base text-foreground">
-          Shariful's Studio & Co.
-        </span>
+        <nav className="flex items-center justify-between px-6 sm:px-12 pt-6 pb-4 max-w-7xl mx-auto">
+          {/* Logo */}
+          <a
+            href="#top"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="font-cursive italic text-xl sm:text-2xl lg:text-3xl tracking-tight text-foreground leading-none"
+          >
+            Shariful's <span className="text-muted-foreground">Studio &amp; Co.</span>
+          </a>
 
-        <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
-              onClick={(e) => {
-                e.preventDefault();
-                const el = document.getElementById(link.toLowerCase());
-                if (el) {
-                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-              }}
-              className="font-body text-[11px] tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300"
-            >
-              {link}
-            </a>
-          ))}
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center gap-10">
+            {links.map((link) => (
+              <a
+                key={link}
+                href={`#${link.toLowerCase()}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const el = document.getElementById(link.toLowerCase());
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
+                }}
+                className="group flex items-center font-body text-[10px] tracking-[0.25em] uppercase text-foreground hover:text-muted-foreground transition-colors duration-500"
+              >
+                {link}
+                {link === "Contact" && (
+                  <span className="ml-2 w-1.5 h-1.5 rounded-full bg-foreground group-hover:bg-muted-foreground transition-colors duration-500" />
+                )}
+              </a>
+            ))}
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+            className="md:hidden flex flex-col justify-center gap-[5px] w-6 h-6"
+          >
+            <span className="block w-full h-px bg-foreground" />
+            <span className="block w-full h-px bg-foreground" />
+          </button>
+        </nav>
+
+        {/* Chrome divider with subtle shine */}
+        <div className="relative max-w-7xl mx-auto h-px">
+          <div className="absolute inset-0 h-px w-full bg-gradient-to-r from-transparent via-foreground/20 to-transparent" />
+          <div className="absolute inset-0 mx-auto w-1/3 h-px bg-gradient-to-r from-transparent via-background to-transparent" />
         </div>
-
-        <button
-          onClick={() => setMenuOpen(true)}
-          className="md:hidden font-body text-[11px] tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300"
-        >
-          Menu
-        </button>
-      </motion.nav>
+      </motion.div>
 
       {/* Full-screen mobile overlay */}
       <AnimatePresence>
@@ -57,7 +80,7 @@ const Navbar = () => {
           >
             <button
               onClick={() => setMenuOpen(false)}
-              className="absolute top-6 right-6 font-body text-[11px] tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className="absolute top-6 right-6 font-body text-[11px] tracking-[0.25em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
             >
               Close
             </button>
@@ -73,11 +96,11 @@ const Navbar = () => {
                     setTimeout(() => {
                       const el = document.getElementById(link.toLowerCase());
                       if (el) {
-                        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
                       }
                     }, 500);
                   }}
-                  className="font-display text-3xl font-light text-foreground hover:italic transition-all duration-300"
+                  className="font-display text-3xl font-light text-foreground hover:italic transition-all duration-500"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.1 + i * 0.06, ease: [0.22, 1, 0.36, 1] }}
