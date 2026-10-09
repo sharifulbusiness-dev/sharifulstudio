@@ -34,7 +34,7 @@ const ServicesSection = () => {
               <span className="font-body text-[10px] text-muted-foreground tracking-wider">
                 {service.number}
               </span>
-              <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-light group-hover:italic transition-all duration-500">
+              <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-light">
                 {service.title}
               </h3>
             </div>

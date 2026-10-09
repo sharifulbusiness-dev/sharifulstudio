@@ -29,31 +29,40 @@ const HeroSection = () => {
         </motion.p>
 
         <motion.h1
-          className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light leading-[0.95] tracking-tight text-foreground"
+          className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light leading-[1.1] text-foreground"
           style={{ y, opacity }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          Web design for brands
+          Shariful’s
           <br />
           <span className="italic font-cursive font-light text-foreground/80">
-            with taste
+            Studio &amp; Co.
           </span>
         </motion.h1>
 
         <motion.div
-          className="mt-12 flex items-center gap-8"
+          className="mt-10 flex items-start gap-6 sm:gap-8"
           style={{ y, opacity }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="w-12 h-px bg-chrome shrink-0" />
-          <p className="font-body text-xs sm:text-sm max-w-sm leading-relaxed text-muted-foreground">
-            From concept to launch, every detail is considered
-            and every pixel earns its place.
-          </p>
+          <div className="w-8 sm:w-12 h-px bg-chrome shrink-0 mt-3" />
+          <div className="max-w-xl space-y-5 font-body text-sm sm:text-base leading-[1.8] text-muted-foreground">
+            <p>
+              We are a design studio working with businesses worldwide on
+              websites, brand identities, and digital products. Our work spans
+              online stores, corporate websites, and custom platforms,
+              from the first idea through to launch.
+            </p>
+            <p>
+              We help businesses make their offer clearer, their identity more
+              consistent, and their websites easier to use. Design that serves
+              the business and the people who use it.
+            </p>
+          </div>
         </motion.div>
       </div>
 
