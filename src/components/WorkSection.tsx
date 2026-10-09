@@ -34,7 +34,7 @@ const WorkSection = () => {
           >
             <div className="flex items-baseline gap-6">
               <span className="font-body text-[10px] text-muted-foreground">{project.year}</span>
-              <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-light group-hover:italic transition-all duration-500">
+              <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-light">
                 {project.name}
               </h3>
             </div>

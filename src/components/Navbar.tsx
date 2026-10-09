@@ -100,7 +100,7 @@ const Navbar = () => {
                       }
                     }, 500);
                   }}
-                  className="font-display text-3xl font-light text-foreground hover:italic transition-all duration-500"
+                  className="font-display text-3xl font-light text-foreground hover:text-muted-foreground transition-colors duration-500"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.1 + i * 0.06, ease: [0.22, 1, 0.36, 1] }}

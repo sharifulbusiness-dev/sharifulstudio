@@ -64,7 +64,7 @@ const FAQSection = () => {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between py-6 text-left group"
               >
-                <span className="font-display text-base sm:text-lg font-light group-hover:italic transition-all duration-300">
+                <span className="font-display text-base sm:text-lg font-light">
                   {faq.question}
                 </span>
                 <motion.span
