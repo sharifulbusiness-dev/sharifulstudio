@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import IntroScreen from "@/components/IntroScreen";
 import Navbar from "@/components/Navbar";
@@ -22,16 +22,9 @@ const Index = () => {
   const [showIntro, setShowIntro] = useState(true);
   const [showMain, setShowMain] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowIntro(false);
-    }, 3500);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="bg-background min-h-screen overflow-x-hidden">
-      <IntroScreen isVisible={showIntro} onComplete={() => setShowMain(true)} />
+      <IntroScreen isVisible={showIntro} onEnter={() => setShowIntro(false)} onComplete={() => setShowMain(true)} />
 
       {showMain && (
         <motion.div
