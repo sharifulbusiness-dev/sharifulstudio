@@ -1,11 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 interface IntroScreenProps {
   onComplete: () => void;
+  onEnter: () => void;
   isVisible: boolean;
 }
 
-const IntroScreen = ({ onComplete, isVisible }: IntroScreenProps) => {
+const IntroScreen = ({ onComplete, onEnter, isVisible }: IntroScreenProps) => {
   return (
     <AnimatePresence onExitComplete={onComplete}>
       {isVisible && (
@@ -51,16 +53,20 @@ const IntroScreen = ({ onComplete, isVisible }: IntroScreenProps) => {
             />
 
             {/* Enter text */}
-            <motion.button
-              className="mt-16 font-body text-[10px] tracking-[0.3em] uppercase text-muted-foreground cursor-pointer bg-transparent border-none hover:text-foreground transition-colors duration-500"
+            <motion.div
+              className="mt-16"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 2.0, ease: [0.22, 1, 0.36, 1] }}
-              onClick={() => {}}
-              whileHover={{ letterSpacing: "0.5em" }}
             >
-              Enter
-            </motion.button>
+              <Button
+                variant="ghost"
+                onClick={onEnter}
+                className="font-body text-[10px] tracking-[0.3em] uppercase text-muted-foreground hover:text-foreground hover:bg-transparent transition-colors duration-500"
+              >
+                Enter
+              </Button>
+            </motion.div>
           </div>
         </motion.div>
       )}
