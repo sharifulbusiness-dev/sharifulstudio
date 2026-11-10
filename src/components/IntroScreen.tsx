@@ -27,7 +27,7 @@ const IntroScreen = ({ onComplete, onEnter, isVisible }: IntroScreenProps) => {
 
             {/* Studio name - cursive */}
             <motion.h1
-              className="font-cursive italic text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-light tracking-wide text-foreground"
+              className="font-ballet text-6xl sm:text-8xl md:text-9xl font-normal tracking-normal text-foreground"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}

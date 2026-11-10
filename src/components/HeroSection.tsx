@@ -37,7 +37,7 @@ const HeroSection = () => {
         >
           Shariful’s
           <br />
-          <span className="italic font-cursive font-light text-foreground/80">
+          <span className="font-ballet font-normal text-foreground/80">
             Studio &amp; Co.
           </span>
         </motion.h1>
