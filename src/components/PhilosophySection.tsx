@@ -23,7 +23,7 @@ const PhilosophySection = () => {
         >
           We don't follow trends.
           <br />
-          <span className="font-ballet text-chrome">We set them.</span>
+          <span className="text-chrome">We set them.</span>
         </motion.h2>
 
         <motion.div
