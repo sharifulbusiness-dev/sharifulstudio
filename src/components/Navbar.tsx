@@ -22,10 +22,9 @@ const Navbar = () => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="font-cursive text-xl sm:text-2xl lg:text-3xl tracking-normal text-foreground leading-none"
+            className="font-cursive italic text-xl sm:text-2xl lg:text-3xl tracking-tight text-foreground leading-none"
           >
-            <span className="font-ballet">Shariful's</span>{" "}
-            <span className="text-muted-foreground">Studio &amp; Co.</span>
+            Shariful's <span className="text-muted-foreground">Studio &amp; Co.</span>
           </a>
 
           {/* Desktop links */}

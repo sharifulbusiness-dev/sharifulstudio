@@ -62,10 +62,17 @@ const FAQSection = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                aria-label={faq.question}
                 className="w-full flex items-center justify-between py-6 text-left group"
               >
                 <span className="font-display text-base sm:text-lg font-light">
-                  {faq.question}
+                  <span
+                    aria-hidden="true"
+                    className="float-left font-ballet text-2xl sm:text-3xl leading-[0.8] mr-3 mt-0.5"
+                  >
+                    {[...faq.question][0]}
+                  </span>
+                  {faq.question.slice(1)}
                 </span>
                 <motion.span
                   className="font-body text-sm text-muted-foreground ml-4 flex-shrink-0"
